@@ -34,7 +34,21 @@
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function(nums, target) {
+var twoSum = function (nums, target) {
+  let result;
+  let expectMap = new Map();
+
+  nums.map((num, index) => {
+    let expect = target - num;
     
+    if (expectMap.has(num)) {
+      result = [expectMap.get(num), index];
+    } else {
+      expectMap.set(expect, index);
+    }
+  })
+  
+  return result;
 };
 
+module.exports = twoSum;
