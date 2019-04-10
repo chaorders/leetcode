@@ -1,4 +1,4 @@
-const isPalindrome = require('../src/9.palindrome-number');
+const isPalindrome = require('../9.palindrome-number');
 
 const testCases = [
   { input: 121, anwser: true },

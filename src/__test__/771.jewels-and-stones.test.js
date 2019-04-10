@@ -1,4 +1,4 @@
-const numJewelsInStones = require('../src/771.jewels-and-stones');
+const numJewelsInStones = require('../771.jewels-and-stones');
 
 const testCases = [
   { inputs: ["aA", "aAAbbbb"], answer: 3 },

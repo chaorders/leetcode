@@ -1,4 +1,4 @@
-const { insertIntoBST, TreeNode } = require('../src/701.insertIntoBST');
+const { insertIntoBST, TreeNode } = require('../701.insertIntoBST');
 
 // class TreeNode {
 //   constructor(val) {

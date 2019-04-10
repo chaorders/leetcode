@@ -1,4 +1,4 @@
-const removeOuterParentheses = require('../src/1021.removeOuterParentheses');
+const removeOuterParentheses = require('../1021.removeOuterParentheses');
 
 testCases = [
   { input: '(()())(())', answer: '()()()' },

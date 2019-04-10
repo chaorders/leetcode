@@ -1,4 +1,4 @@
-const toLowerCase = require('../src/709.toLowerCase');
+const toLowerCase = require('../709.toLowerCase');
 
 const testCases = [
   { input: 'Hello', answer: 'hello' },

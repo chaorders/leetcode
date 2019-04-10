@@ -1,4 +1,4 @@
-const twoSum = require('../src/1.two-sum');
+const twoSum = require('../1.two-sum');
 
 const testCases = [
   { input: { nums: [1, 3, 5, 75, 245], target: 80 }, anwser: [2, 3] },

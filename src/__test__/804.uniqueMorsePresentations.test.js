@@ -1,4 +1,4 @@
-const uniqueMorsePresentations = require('../src/804.uniqueMorsePresentations');
+const uniqueMorsePresentations = require('../804.uniqueMorsePresentations');
 
 const testCases = [
   { input: ['gin', 'zen', 'gig', 'msg'], answer: new Set().add('--...-.').add('--...--.').size },
