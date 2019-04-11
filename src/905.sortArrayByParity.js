@@ -1,23 +1,26 @@
 "use strict"
 
 const sortArrayByParity = (A) => {
-  let result = new Array(A.length);
   let evenIndex = 0;
-  let oddIndex = A.length - 1;
-
+  let tmp;
   let value;
+
   for (let index = 0; index < A.length; index++) {
     value = A[index];
-    if (value % 2 === 0) {
-      result[evenIndex] = value;
+    if ((value & 1) === 0) {
+      if (evenIndex === index) {
+        evenIndex++;
+        continue;
+      }
+
+      tmp = A[evenIndex];
+      A[evenIndex] = value;
+      A[index] = tmp;
       evenIndex++;
-    } else {
-      result[oddIndex] = value;
-      oddIndex--;
-    }
+    } 
   }
 
-  return result;
+  return A;
 };
 
 module.exports = sortArrayByParity;
