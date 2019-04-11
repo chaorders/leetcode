@@ -48,22 +48,46 @@
  * @param {number} x
  * @return {boolean}
  */
-var isPalindrome = function (x) {
-  if (x == 0) {
+// var isPalindrome = function (x) {
+//   if (x == 0) {
+//     return true;
+//   }
+
+//   if (x < 0 || x % 10 == 0) {
+//     return false;
+//   }
+
+//   let reversedX = 0;
+//   while (x > reversedX) {
+//     reversedX = reversedX * 10 + x % 10;
+//     x = Math.floor(x / 10);
+//   }
+
+//   return ((x == reversedX) || (x == Math.floor(reversedX / 10)));
+// };
+var isPalindrome = x => {
+  if (x === 0) {
     return true;
   }
 
-  if (x < 0 || x % 10 == 0) {
+  if (x < 0) {
     return false;
   }
 
-  let reversedX = 0;
-  while (x > reversedX) {
-    reversedX = reversedX * 10 + x % 10;
-    x = Math.floor(x / 10);
+  let numStr = x.toString();
+
+  let start = 0;
+  let end = numStr.length - 1;
+  while (start < end) {
+    if (numStr[start] !== numStr[end]) {
+      return false;
+    }
+
+    start++;
+    end--;
   }
 
-  return ((x == reversedX) || (x == Math.floor(reversedX / 10)));
-};
+  return true;
+}
 
 module.exports = isPalindrome;

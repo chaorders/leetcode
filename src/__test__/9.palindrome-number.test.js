@@ -4,6 +4,7 @@ const testCases = [
   { input: 121, anwser: true },
   { input: -121, anwser: false },
   { input: 10, anwser: false },
+  { input: 11, anwser: true },
 ]
 
 testCases.map(c => {
