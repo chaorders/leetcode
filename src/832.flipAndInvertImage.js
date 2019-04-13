@@ -55,7 +55,6 @@
  */
 const flipAndInvertImage = (A) => {
   let array;
-  let tmp;
   let innerLength;
   let innerMidIndex;
   for (let outerIndex = 0; outerIndex < A.length; outerIndex++) {
@@ -70,13 +69,12 @@ const flipAndInvertImage = (A) => {
 
     for (let innerIndex = 0; innerIndex < innerMidIndex; innerIndex++) {
       // skip unnecessary swap and invert
-      if (array[innerIndex] ^ array[innerLength - innerIndex - 1]) {
+      if (array[innerIndex] !== array[innerLength - innerIndex - 1]) {
         continue;
+      } else {
+        array[innerIndex] = array[innerIndex] ^ 1;
+        array[innerLength - innerIndex - 1] = array[innerLength - innerIndex - 1] ^ 1;
       }
-
-      tmp = array[innerIndex];
-      array[innerIndex] = array[innerLength - innerIndex - 1] ^ 1;
-      array[innerLength - innerIndex - 1] = tmp ^ 1;
     }
   }
 
